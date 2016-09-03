@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2015 Bitergia
+# Copyright (C) 2015-2016 Bitergia
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,32 +21,68 @@
 #
 
 from .bugzilla import Bugzilla, BugzillaCommand
+from .bugzillarest import BugzillaREST, BugzillaRESTCommand
+from .confluence import Confluence, ConfluenceCommand
+from .discourse import Discourse, DiscourseCommand
 from .gerrit import Gerrit, GerritCommand
 from .git import Git, GitCommand
 from .github import GitHub, GitHubCommand
+from .gmane import Gmane, GmaneCommand
 from .jenkins import Jenkins, JenkinsCommand
 from .jira import Jira, JiraCommand
+from .kitsune import Kitsune, KitsuneCommand
 from .mbox import MBox, MBoxCommand
+from .mediawiki import MediaWiki, MediaWikiCommand
+from .phabricator import Phabricator, PhabricatorCommand
+from .pipermail import Pipermail, PipermailCommand
+from .redmine import Redmine, RedmineCommand
+from .remo import ReMo, ReMoCommand
 from .stackexchange import StackExchange, StackExchangeCommand
+from .supybot import Supybot, SupybotCommand
+from .telegram import Telegram, TelegramCommand
 
 
 PERCEVAL_BACKENDS = {
                      'bugzilla'      : Bugzilla,
-                     'git'           : Git,
+                     'bugzillarest'  : BugzillaREST,
+                     'confluence'    : Confluence,
+                     'discourse'     : Discourse,
                      'gerrit'        : Gerrit,
+                     'git'           : Git,
                      'github'        : GitHub,
+                     'gmane'         : Gmane,
                      'jenkins'       : Jenkins,
                      'jira'          : Jira,
+                     'kitsune'       : Kitsune,
                      'mbox'          : MBox,
-                     'stackexchange' : StackExchange
+                     'mediawiki'     : MediaWiki,
+                     'phabricator'   : Phabricator,
+                     'pipermail'     : Pipermail,
+                     'redmine'       : Redmine,
+                     'remo'          : ReMo,
+                     'stackexchange' : StackExchange,
+                     'supybot'       : Supybot,
+                     'telegram'      : Telegram
                     }
 PERCEVAL_CMDS = {
                  'bugzilla'      : BugzillaCommand,
-                 'git'           : GitCommand,
+                 'bugzillarest'  : BugzillaRESTCommand,
+                 'confluence'    : ConfluenceCommand,
+                 'discourse'     : DiscourseCommand,
                  'gerrit'        : GerritCommand,
+                 'git'           : GitCommand,
                  'github'        : GitHubCommand,
+                 'gmane'         : GmaneCommand,
                  'jenkins'       : JenkinsCommand,
                  'jira'          : JiraCommand,
+                 'kitsune'       : KitsuneCommand,
                  'mbox'          : MBoxCommand,
-                 'stackexchange' : StackExchangeCommand
+                 'mediawiki'     : MediaWikiCommand,
+                 'phabricator'   : PhabricatorCommand,
+                 'pipermail'     : PipermailCommand,
+                 'redmine'       : RedmineCommand,
+                 'remo'          : ReMoCommand,
+                 'stackexchange' : StackExchangeCommand,
+                 'supybot'       : SupybotCommand,
+                 'telegram'      : TelegramCommand
                 }
